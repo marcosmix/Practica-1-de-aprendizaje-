@@ -1,0 +1,36 @@
+:root
+{
+  --color1: rgb(219,144,5);
+  --color2: rgba(23,180,83,.0788);
+  --color3: rgba(11,194,211,0.623);
+  --fondo:#f2f2;
+  --titulos:33px;
+  --imagenes:60px;
+  --espacios:10px;
+  --espacios-contenidos:45px;
+}
+
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  background: var(--fondo);
+}
+img
+{
+  vertical-align: top;
+
+}
+
+header
+{
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(to bottom,rgba(211,135,20,.6),rgba(29,241,171,.6),rgba(7,109,150,.45)),url();
+}
