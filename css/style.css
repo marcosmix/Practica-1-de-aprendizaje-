@@ -5,14 +5,18 @@
   --color3: rgba(11,194,211,0.623);
   --fondo:#f2f2;
   --titulos:33px;
-  --imagenes:60px;
+  --margenes:60px;
   --espacios:10px;
   --espacios-contenidos:45px;
 }
-
-
-*
+@font-face
 {
+  font-family: "ubuntu-regular";
+  src:url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
+
+}
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,6 +25,7 @@
 body
 {
   background: var(--fondo);
+  font-family: "ubuntu-regular";
 }
 img
 {
@@ -32,5 +37,98 @@ header
 {
   width: 100%;
   height: 600px;
-  background: linear-gradient(to bottom,rgba(211,135,20,.6),rgba(29,241,171,.6),rgba(7,109,150,.45)),url();
+  background: linear-gradient(to bottom,rgba(211,135,20,.6),rgba(29,241,171,.6),rgba(7,109,150,.45)),url(../img/fondo-header.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+nav
+{
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+}
+
+.nav1
+{
+  background: transparent;
+  height: 80px;
+}
+.nav2
+{
+  background: transparent;
+  height: 100px;
+  color:#000;
+  }
+
+.contenedor-nav
+{
+  display: flex;
+margin-left:5%;
+margin-right: 5%;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+ 
+  height: inherit;
+  overflow: hidden;
+  box-shadow: none;
+
+}
+
+nav .enlaces a
+{
+  display: inline-block;
+  padding: 5px 0;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300px;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+}
+
+nav .enlaces a:hover
+{
+  border-bottom: 3px solid #4CC2D7;
+  transition: 0.6s;
+
+}
+
+nav .logo img
+{
+  width: 80px;
+} 
+
+header .icono
+{
+  display: none;
+  padding: 23.5px 20px;
+  font-size: 24px;
+}
+
+.textos
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center; /*sin display flex no se puede usar esta propiedad */
+  flex-direction: column;
+  color: white;
+  overflow: hidden;
+
+}
+
+.textos h1
+{
+  font-size: 80px;
+
+}
+
+.textos h2
+{
+  font-size: 30px;
 }
