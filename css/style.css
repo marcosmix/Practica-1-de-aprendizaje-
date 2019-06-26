@@ -5,9 +5,10 @@
   --color3: rgba(11,194,211,0.623);
   --fondo:#f2f2;
   --titulos:33px;
+  --subtitulos:23px;
   --margenes:60px;
   --espacios:10px;
-  --espacios-contenidos:45px;
+  --espacios-contenidos:15px;
 }
 @font-face
 {
@@ -37,7 +38,7 @@ header
 {
   width: 100%;
   height: 600px;
-  background: linear-gradient(to bottom,rgba(211,135,20,.6),rgba(29,241,171,.6),rgba(7,109,150,.45)),url(../img/fondo-header.jpg);
+  background: linear-gradient(to bottom,rgba(243,2,20,.6),rgba(29,241,171,.6),rgba(7,109,150,.45)),url(../img/fondo-header.jpg);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -131,4 +132,91 @@ header .icono
 .textos h2
 {
   font-size: 30px;
+}
+
+.contenedor
+{
+  margin: auto;
+  padding: var(--margenes);
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  overflow: hidden;
+  
+}
+
+.contenedor h3
+{
+  font-size: var(--titulos);
+  color:var(--color3);
+  margin-bottom: var(--espacios);
+
+}
+
+.contenedor p
+{
+  font-size: var(--subtitulos);
+  color:var(--color1);
+
+}
+
+/*La pseudo clase after se agrega despues de la clase elejida (en este caso se llama after porque si)*/
+.after::after
+{
+  content:'';
+  display: block;
+  margin:auto;
+  margin-bottom: var(--espacios-contenidos);
+  width:100px;
+  height: 2px;
+  background-color: var(--color1);
+  margin-top: var(--espacios);
+}
+
+.card
+{
+  display: flex;
+  justify-content: space-around; 
+  /*space-witwin separa los elementos 
+  flexibles contenidos en distribuidos a lo largo del 
+  eje principal (main axes) de forma equitativa */
+
+  flex-wrap: wrap; /*flex-wrap gestiona los ejes main 
+  como si fueran multiples ejes main axis para crear
+  ejes secundarios . Esto es usado cuando el contenido
+  se agranda y excede el espacio del felxbox contenedor 
+  se puede optar
+por que el contenido se apilie uno de bajo del otro o 
+que se achique para todo el contenido felixble para 
+adaptarse a la pantalla */
+}
+
+.content-card
+{
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+  overflow: hidden;
+  /* atrapa todo el contenido de la caja flexible dentro de la caja ya que de ontra manera al redimencionar la pagina el contenido sobrepasara 
+  el tamaño del contenedor */
+  height: 400px;
+  /*Se le debe poner el alto en px para evitar que haya cambio de tamaño en el largo de los 
+  elementos no se puede poner en % ya que las imagenes son de distintos tamaños */
+}
+
+.personaje
+{
+  height: 80%;
+}
+
+.content-card img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*Con esta propedad la imagen queda centrada y se adapta a su contenedor*/
+}
+
+.seccion-personajes
+{
+  background: var(--color2);
 }
