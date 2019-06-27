@@ -1,4 +1,4 @@
-
+/*
 
 function Usuario(nom,ape,p)
 {
@@ -25,4 +25,6 @@ function inicial()
 	alert("si funciono");
 }
 
-window.onload=inicial;
+window.onload=inicial;*/
+
+$(function(){alert("hola");})

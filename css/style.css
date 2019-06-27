@@ -61,17 +61,17 @@ nav
   background: transparent;
   height: 100px;
   color:#000;
-  }
+}
 
 .contenedor-nav
 {
   display: flex;
-margin-left:5%;
-margin-right: 5%;
+  margin-left:5%;
+  margin-right: 5%;
   width: 90%;
   justify-content: space-between;
   align-items: center;
- 
+
   height: inherit;
   overflow: hidden;
   box-shadow: none;
@@ -234,3 +234,162 @@ adaptarse a la pantalla */
   font-size: 99%;
 }
 
+
+.abaut
+{
+
+  height: auto; /*Segun su contenido */
+  background: linear-gradient(to bottom,rgba(0,01,0,.8),rgba(7,109,150,.8)),url(../img/fondo.png);
+  background-position: top;
+  background-attachment:scroll;
+  background-size: cover;
+}
+
+.formatos
+{
+
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.cajaFormatos>h4
+{
+  
+  margin-bottom: var(--espacios);
+  margin-top: var(--espacios);
+}
+
+.cajaFormatos>p
+{
+  text-align: center;
+}
+
+.botones-destacado
+{
+ overflow: hidden; 
+}
+
+.botones-destacados li
+{
+  display: inline-block;
+  text-align: center;
+  margin-left: var(--espacios);
+  margin-bottom: var(--espacios-contenidos);
+  padding: 6px 12px;
+  border: 1px solid var(--color1);
+  list-style: none;
+  color: var(--color1);
+}
+
+.botones-destacados li:hover
+{
+  background-color:var(--color1);
+  color: white;
+  cursor: pointer;
+}
+
+.botones-destacados .active
+{
+  background-color:var(--color1);
+  color: white;
+}
+
+.galeria-destacada
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.galeria-destacada .cont-destacados
+{
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+  height: 300px;
+  overflow: hidden; /*Logra que el espacio ocupado por la imagen no se escape de su contenedor*/
+  margin-bottom: var(--espacios-contenidos);
+
+}
+
+
+.img-destacados
+{
+  height: 90%;
+  width: 100%;
+}
+
+.img-destacados img
+{
+  height:100%;
+  width: 100%;  
+  object-fit: cover;
+
+}
+
+.text-destacado
+{
+  height: 100%;
+}
+
+.text-destacado
+{
+  line-height: 30px;
+  
+}
+
+footer
+{
+  background:url(../img/maxresdefault.jpg);
+  text-align: center;
+  
+
+}
+footer p
+{
+  color:orange;
+  font-size: 20px;
+  margin-top: var(--espacios);
+}
+
+.marca-logo
+{
+  width: 40%;
+  margin: auto;
+  margin-bottom: var(--espacios);
+
+}
+
+.marca-logo img
+{  
+  width: 100%;
+}
+
+.contenedor-iconos-footer
+{
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+.fas 
+{
+  font-size:60px;
+  color:white;
+  margin-bottom: var(--espacios);
+  display: inline-block;
+  
+}
+
+.far
+{
+  font-size:60px;
+  color:white;
+  margin-bottom: var(--espacios);
+  display: inline-block;
+}
