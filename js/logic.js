@@ -1,30 +1,94 @@
-/*
 
-function Usuario(nom,ape,p)
+let nav=document.getElementById("nav");
+let menu=document.getElementById("enlace");
+let icono=document.getElementById("open");
+let botones=document.getElementsByClassName("btn-header");
+let pulso=false;
+
+
+function menus()
 {
-	this.nombre=nom;
-	this.apellido=ape;
-	this.pass=p;
+	let Desplazamiento_Actual = window.pageYOffset;
 
-	this.presentar=presentar;
+	if (Desplazamiento_Actual<= 300) {
+		nav.classList.remove('nav2');
+		nav.className=('nav1');
+		nav.style.transition='1s';
+		menu.style.top='100px';
+		icono.style.color='white';
+	} else {
+		nav.classList.remove('nav1');
+		nav.className=('nav2');
+		nav.style.transition='1s';
+		menu.style.top='140px';
+		icono.style.color='black';
+	}
 
-
+	
 }
+                                                                             
 
-function presentar()
+
+function apertura()
 {
-	alert("Me llamo "+this.nombre+" "+this.apellido);
+	if(!pulso)
+	{
+		menu.style.width ='70vw';
+		pulso=true;
+	}else
+	{
+		menu.style.width='0%';
+		menu.style.overflow='hidden';
+		pulso=false;
+	}
 }
-
-
-var p1=new Usuario("Marcos","Caballero","yella");
-
-function inicial()
+ 
+window.addEventListener('load',function()
 {
-	p1.presentar();
-	alert("si funciono");
-}
+	
+	let _body=document.getElementById('hidden');
+	let preLoader=document.getElementById('onload');
 
-window.onload=inicial;*/
+	_body.classList.remove('hidden');
+	preLoader.style.display='none';
+	menus();
+});
 
-$(function(){alert("hola");})
+
+
+
+window.addEventListener('scroll',function()
+{
+	console.log(window.pageYOffset);
+	menus();
+
+});
+
+icono.addEventListener('click',function()
+{
+	apertura();
+});
+
+window.addEventListener('resize',function()
+{
+	if(screen.width>=700)
+	{
+		pulso=false;
+		menu.style.removeProperty('overflow');
+		menu.style.removeProperty('width');
+	}
+});
+window.addEventListener('click',function(e){
+	 console.log(e.target);
+	 if(pulso)
+	 {
+		 let span=document.querySelector('span');
+		 if(e.target!==span && e.target!==icono)
+		 {
+			menu.style.width='0%';
+			menu.style.overflow='hidden';
+			pulso
+		 }
+	 }
+
+});
